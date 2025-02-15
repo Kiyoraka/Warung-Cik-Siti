@@ -43,20 +43,6 @@ warung-cik-siti/
         └── restaurant-interior.jpg
 ```
 
-## 🚀 Getting Started
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/warung-cik-siti.git
-```
-2. Navigate to the project directory:
-```bash
-cd warung-cik-siti
-```
-3. Open `index.html` in your web browser or use a local server:
-```bash
-python -m http.server
-```
-
 ## 🎨 Image Assets Requirements
 ### Menu Item Images
 - Size: 400x300 pixels
