@@ -1,3 +1,4 @@
+/* assets/css/style.css */
 /* Reset and base styles */
 * {
     margin: 0;
@@ -9,15 +10,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #fff9f0;
 }
 
 /* Header styles */
 .header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(139, 69, 19, 0.95);
     position: fixed;
     width: 100%;
     z-index: 1000;
     padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -30,8 +33,10 @@ body {
 
 .logo {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    font-family: 'Arial', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
@@ -43,16 +48,17 @@ body {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #e8b347;
+    color: #ffd700;
 }
 
 /* Hero section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                 url('/api/placeholder/1920/1080') center/cover;
     display: flex;
     align-items: center;
@@ -67,33 +73,41 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
+    color: #fff;
 }
 
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #e8b347;
+    background-color: #ff6b6b;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta-button:hover {
-    background-color: #d4a03f;
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
 }
 
 /* Menu section */
 .menu {
     padding: 5rem 1rem;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .menu-container {
@@ -105,6 +119,17 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
+    color: #8b4513;
+    position: relative;
+}
+
+.menu h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #ff6b6b;
+    margin: 10px auto;
 }
 
 .menu-grid {
@@ -115,19 +140,21 @@ body {
 
 .menu-item {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    border: 1px solid #f0f0f0;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .menu-item img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -137,23 +164,26 @@ body {
 
 .menu-item h3 {
     margin-bottom: 0.5rem;
+    color: #8b4513;
+    font-size: 1.4rem;
 }
 
 .menu-item p {
     color: #666;
     margin-bottom: 1rem;
+    font-size: 0.95rem;
 }
 
 .price {
-    color: #e8b347;
+    color: #ff6b6b;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* About section */
 .about {
     padding: 5rem 1rem;
-    background-color: #fff;
+    background-color: #fff9f0;
 }
 
 .about-container {
@@ -168,17 +198,25 @@ body {
 .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color: #8b4513;
+}
+
+.about-content p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .about-image img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact section */
 .contact {
     padding: 5rem 1rem;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .contact-container {
@@ -190,12 +228,17 @@ body {
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color: #8b4513;
 }
 
 .contact-form {
     display: grid;
     gap: 1.5rem;
     margin-top: 2rem;
+    background: #fff9f0;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -205,6 +248,8 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    color: #8b4513;
+    font-weight: 500;
 }
 
 .form-group input,
@@ -213,11 +258,19 @@ body {
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: #8b4513;
     color: #fff;
     padding: 2rem 1rem;
     text-align: center;
@@ -245,7 +298,7 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(139, 69, 19, 0.95);
         flex-direction: column;
         padding: 1rem;
         text-align: center;
@@ -256,7 +309,7 @@ body {
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .about-container {
@@ -265,5 +318,9 @@ body {
 
     .about-image {
         order: -1;
+    }
+
+    .menu-item {
+        margin: 0 1rem;
     }
 }
