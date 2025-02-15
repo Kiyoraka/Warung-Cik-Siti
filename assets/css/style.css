@@ -13,6 +13,10 @@ body {
     background-color: #fff9f0;
 }
 
+p {
+    color: #ffffff;
+}
+
 /* Header styles */
 .header {
     background-color: rgba(139, 69, 19, 0.95);
@@ -397,39 +401,76 @@ body {
 
 /* Media queries */
 @media (max-width: 768px) {
+    .header {
+        background-color: #8B4513;
+        padding: 1rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
     .mobile-menu-btn {
-        display: block;
+        display: none; /* Hide the menu button */
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         background-color: rgba(139, 69, 19, 0.95);
+        display: flex;
         flex-direction: column;
-        padding: 1rem;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
     }
 
     /* Intro Mobile Version */
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-top: 3rem;
     }
-    
+
+    .hero-content h1 span:first-child {
+        display: none; /* Hide "Welcome to" text */
+    }
+
     .hero-features {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
+        margin: 2rem 0;
     }
-    
+
     .feature {
-        padding: 1rem;
+        background: rgba(139, 69, 19, 0.8);
+        padding: 1.2rem;
+        border-radius: 8px;
     }
 
     /* About Mobile Version */
